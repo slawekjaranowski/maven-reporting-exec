@@ -129,7 +129,7 @@ public class TestDefaultMavenReportExecutor
         Plugin plugin = new Plugin();
         plugin.setGroupId( "org.apache.maven.plugins" );
         plugin.setArtifactId( "maven-javadoc-plugin" );
-        plugin.setVersion( "3.0.0-M1" );
+        plugin.setVersion( "3.3.2-SNAPSHOT" );
         Dependency dependency = new Dependency();
         dependency.setGroupId( "commons-lang" );
         dependency.setArtifactId( "commons-lang" );
@@ -170,7 +170,7 @@ public class TestDefaultMavenReportExecutor
             ReportPlugin reportPlugin = new ReportPlugin();
             reportPlugin.setGroupId( "org.apache.maven.plugins" );
             reportPlugin.setArtifactId( "maven-javadoc-plugin" );
-            reportPlugin.setVersion( "3.0.0-M1" );
+            reportPlugin.setVersion( "3.3.2-SNAPSHOT" );
 
             for ( ReportSet reportSet : javadocReportSets )
             {

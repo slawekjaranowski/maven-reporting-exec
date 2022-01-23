@@ -91,7 +91,7 @@ import org.codehaus.plexus.util.xml.Xpp3DomUtils;
  * LifecycleExecutor.calculateForkedExecutions(...)} if any forked execution is needed: if yes, execute the forked
  * execution here</li>
  * </ul>
- * 
+ *
  * @author Olivier Lamy
  */
 @Component( role = MavenReportExecutor.class )
@@ -117,11 +117,8 @@ public class DefaultMavenReportExecutor
                                                                "org.apache.maven.reporting.MavenMultiPageReport",
                                                                "org.apache.maven.doxia.siterenderer.Renderer",
                                                                "org.apache.maven.doxia.sink.SinkFactory",
-                                                               "org.codehaus.doxia.sink.Sink",
                                                                "org.apache.maven.doxia.sink.Sink",
-                                                               "org.apache.maven.doxia.sink.SinkEventAttributes",
-                                                               "org.apache.maven.doxia.logging.LogEnabled",
-                                                               "org.apache.maven.doxia.logging.Log" );
+                                                               "org.apache.maven.doxia.sink.SinkEventAttributes" );
 
     private static final List<String> EXCLUDES = Arrays.asList( "doxia-site-renderer", "doxia-sink-api",
                                                                 "maven-reporting-api" );
@@ -551,7 +548,7 @@ public class DefaultMavenReportExecutor
      * <li>ask {@link PluginVersionResolver} to get a fallback version and display a warning as it's not a recommended
      * use.</li>
      * </ol>
-     * 
+     *
      * @param reportPlugin the report plugin to resolve the version
      * @param mavenReportExecutorRequest the current report execution context
      * @return the report plugin version
@@ -637,7 +634,7 @@ public class DefaultMavenReportExecutor
 
     /**
      * Search similar (same groupId and artifactId) plugin as a given report plugin.
-     * 
+     *
      * @param reportPlugin the report plugin to search for a similar plugin
      * @param plugins the candidate plugins
      * @return the first similar plugin
@@ -669,7 +666,7 @@ public class DefaultMavenReportExecutor
      * </ul>
      * </p>
      * The plugin could only be present in the dependency management section.
-     * 
+     *
      * @param mavenReportExecutorRequest
      * @param buildPlugin
      * @param reportPlugin

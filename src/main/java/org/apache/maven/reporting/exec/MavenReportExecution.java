@@ -32,16 +32,16 @@ import org.apache.maven.reporting.MavenReport;
  *   <li>the goal name associated to the report,</li>
  *   <li>the associated {@link ClassLoader} for the report generation,</li>
  *   <li>the {@link Plugin} associated to the {@link MavenReport}.</li>
- * </ul> 
+ * </ul>
  * <p>
  *   With this bean, a plugin wanting to generate a report (= <i>"execute"</i> the report) has to call the
- *   {@link MavenReport#generate(org.codehaus.doxia.sink.Sink, java.util.Locale)}
+ *   {@link MavenReport#generate(org.apache.maven.doxia.sink.Sink, java.util.Locale)}
  *   method, setting the current {@link Thread} classLoader first with {@link #classLoader}.
  * </p>
  * <p>
  *   This bean is instantiated by {@link MavenReportExecutor}.
  * </p>
- * 
+ *
  * @author Olivier Lamy
  */
 public class MavenReportExecution
@@ -94,7 +94,7 @@ public class MavenReportExecution
             {
                 Thread.currentThread().setContextClassLoader( originalClassLoader );
             }
-        } 
+        }
     }
 
     public MavenReport getMavenReport()
